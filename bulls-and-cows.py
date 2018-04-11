@@ -15,7 +15,7 @@ for i in xrange(0, 10000):
             if v in gRemain:
                 gRemain = gRemain.replace(v,'',1)
         
-        if (4 - len(tRemain)) != int(bulls) or (len(tRemain) - len(gRemain)) != int(cows) or (guess == test and int(bulls) != 4):
+        if (4 - len(tRemain)) != int(bulls) or (len(tRemain) - len(gRemain)) != int(cows) :
             break
     else:
         print test
