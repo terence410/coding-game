@@ -1,10 +1,8 @@
-let castle = Array(+readline()).fill().map(x => readline());
-let cards = [];
-let check = castle.every((x, i) => {
+let castle = [...Array(+readline())].map(readline);
+let left = [];
+print(castle.every((x, i) => {
     if(x.match(/^(\.*)((\/\\)*(\.)*)*$/)){
-        let newCards = x.split("").map((x, i) => x === "/" ? i: -1).filter(x => x >= 0);
-        return cards.every(x => newCards.includes(x - 1) && newCards.includes(x + 1)) ? 
-             cards = newCards: false;
+        let left1 = x.split("").map((x, i) => x === "/" ? i: -1).filter(x => x >= 0);
+        return left.every(x => left1.includes(x - 1) && left1.includes(x + 1)) ?  left = left1: false;
     }
-});
-console.log(check ? 'STABLE': 'UNSTABLE');
+}) ? 'STABLE': 'UNSTABLE');
