@@ -8,9 +8,7 @@ class S
         for (int i = 0, N = int.Parse(Console.ReadLine()); i < N; i++)
         {
             string text = Console.ReadLine();
-            while(Regex.Match(text, regex).Success){
-                text = Regex.Replace(text, regex, "");
-            }
+            while(Regex.Match(text, regex).Success) text = Regex.Replace(text, regex, "");
             Console.WriteLine(Regex.Match(text, @"[\[\]\(\){}<>]").Success ? "false": "true");
         }
     }
