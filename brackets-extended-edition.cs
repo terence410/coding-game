@@ -9,7 +9,7 @@ class S
         {
             string text = Console.ReadLine();
             while(Regex.Match(text, regex).Success) text = Regex.Replace(text, regex, "");
-            Console.WriteLine(Regex.Match(text, @"[\[\]\(\){}<>]").Success ? "false": "true");
+            Console.WriteLine((!Regex.Match(text, @"[\[\]\(\){}<>]").Success+"").ToLower());
         }
     }
 }
