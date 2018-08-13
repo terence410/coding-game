@@ -1,6 +1,3 @@
-let regex = /[\(\)]\w*[\(\)]|[{}]\w*[{}]|[\[\]]\w*[\[\]]|[<>]\w*[<>]/;
-[...Array(+readline())].map(_ => {
-    let text = readline();
-    while(regex.test(text)) text = text.replace(regex, '');
-    console.log(!/[\[\]\(\){}<>]/.test(text));
-});
+let regex = /[\(\)]\w*[\(\)]|[{}]\w*[{}]|[\[\]]\w*[\[\]]|[<>]\w*[<>]/g;
+let replace = s => regex.test(s) ? replace(s.replace(regex, '')) : s;
+[...Array(+readline())].map(_ => console.log(!/[\[\]\(\){}<>]/.test(replace(readline()))));
