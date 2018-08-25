@@ -1,2 +1,1 @@
-let [l, x, N] = [...Array(3)].map(_ => +readline());
-print((blitz = (l, x) => x >= 0 ? blitz(++l, x - (l * Math.sqrt(l) * 10 | 0)): `${l}\n${-x}`)(l, N * 300 - x));
+print((b=(l,x)=>x>=0?b(++l,x-(l*Math.sqrt(l)*10|0)):`${l}\n${-x}`).call(null,+(r=readline)(),-r()+r()*300));
