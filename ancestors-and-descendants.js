@@ -1,7 +1,7 @@
 let stacks = [];
 [...Array(+readline())].forEach(_ => {
-  let person = readline().match(/^([\.]*)(.*)/);
-  if(person[1].length - stacks.length) print(stacks.join` > `);
-  stacks.splice(person[1].length, stacks.length, person[2]);
+  let [x, dots, name] = readline().match(/^([\.]*)(.*)/);
+  if(dots.length - stacks.length) print(stacks.join` > `);
+  stacks.splice(dots.length, stacks.length, name);
 });
 print(stacks.join` > `);
