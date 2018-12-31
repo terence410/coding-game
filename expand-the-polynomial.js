@@ -19,12 +19,12 @@ found1.forEach(equation => {
 
 let outputs = [];
 answers.reverse().forEach((vv, ii) => {
-    if(vv != 0){
+    if(vv){
         let power = (10 - ii - 1);
         let alphabet = power > 1 ? "x^" + power: (power ? "x": "");
         let sign = vv > 0 ? (outputs.length ? "+": "") : "-";
         let number = !power || Math.abs(vv) != 1 ? Math.abs(vv): "";
         outputs.push(`${sign}${number}${alphabet}`);
     }
-})
+});
 print(outputs.join(""));
