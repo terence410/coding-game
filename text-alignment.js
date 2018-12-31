@@ -6,6 +6,6 @@ if(alignment === 'LEFT')
 else  if(alignment === 'RIGHT')
     inputs.forEach(input => print(input.padStart(max, ' ')));
 else  if(alignment === 'CENTER')
-    inputs.forEach(input =>  print(input.padStart((max - input.length)/2 + input.length, ' ')));
+    inputs.forEach(input =>  print(input.padStart(max/2 + input.length/2, ' ')));
 else  if(alignment === 'JUSTIFY')
     inputs.forEach(input => print(input.replace(/ /g, "".padStart(1 + (max - input.length) / (input.split` `.length - 1), ' '))));
